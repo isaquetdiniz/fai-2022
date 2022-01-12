@@ -1,11 +1,11 @@
 {
-  "name": "fai-boas-praticas",
+  "name": "fai-db-e-orms",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "tsnd --watch src/ src/refactor/main/index.ts"
+    "start:dev": "tsnd --watch src/ src/main/index.ts"
   },
   "repository": {
     "type": "git",

@@ -10,7 +10,7 @@ import app from './app';
 
   const httpServer = http.createServer(app);
 
-  httpServer.listen(3000, () => {
-    console.log('Server running in port 3000');
+  httpServer.listen(3001, () => {
+    console.log('Server running in port 3001');
   });
 })();

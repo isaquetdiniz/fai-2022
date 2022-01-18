@@ -1,1 +1,18 @@
+# Logs
+yarn-error.log*
+
+# Compiled code
+dist/
+
+# Dependency directories
 node_modules/
+
+# Optional eslint cache
+.eslintcache
+
+# Vscode
+.vscode/
+
+# dotenv environment variables file
+.env
+.env.test

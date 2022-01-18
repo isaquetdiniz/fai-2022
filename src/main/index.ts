@@ -1,5 +1,21 @@
-import httpServer from "../infra/express/server"
+import { PrismaClient } from '@prisma/client'
 
-httpServer.listen(3001, () => {
-    console.log('Server rodando na 3001')
-})
+const prisma = new PrismaClient()
+
+async function main() {
+    await prisma.power.create({
+        data: {
+            name: 'Voar'
+        }
+    })
+    const powers = await prisma.power.findMany()
+    console.log(powers)
+}
+
+main()
+  .catch((e) => {
+    throw e
+  })
+  .finally(async () => {
+    await prisma.$disconnect()
+  })

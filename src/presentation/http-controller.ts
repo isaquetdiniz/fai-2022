@@ -1,4 +1,4 @@
-import { Usecase } from "refactor/domain/interfaces/usecase"
+import { Usecase } from "../domain/interfaces/usecase"
 
 type requestHttp = {
     body: any

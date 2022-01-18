@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:10.3
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_DB=${DATABASE_NAME}
+      - POSTGRES_USER=${DATABASE_USERNAME}
+      - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+    volumes:
+      - ./pg-data:/var/lib/postgresql/data
+    ports:
+      - ${DATABASE_PORT}:5432
+
+  adminer:
+    image: adminer
+    env_file:
+      - .env
+    ports:
+      - ${ADMINER_PORT}:8080
+    depends_on:
+      - db
